@@ -1,0 +1,17 @@
+# https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+service: consulta-placa-serverless
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: us-east-1
+  stage: dev
+  #profile: devProfile # https://serverless.com/framework/docs/providers/aws/guide/credentials#using-aws-profiles
+
+functions:
+  consultaPlaca:
+    handler: handler.consultaPlaca
+    events:
+      - http:
+          method: GET
+          path: placa/{placa}
