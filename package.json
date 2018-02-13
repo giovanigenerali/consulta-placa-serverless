@@ -4,6 +4,7 @@
   "description": "Consultar placa de veículos (SINESP) [serverless]",
   "main": "handler.js",
   "scripts": {
+    "start:dev": "sls offline start",
     "invoke:local": "make invoke-local",
     "deploy:dev": "sls deploy -s dev",
     "invoke": "make invoke",
@@ -34,6 +35,7 @@
     "sinesp-nodejs": "^1.0.7"
   },
   "devDependencies": {
-    "serverless": "^1.26.0"
+    "serverless": "^1.26.0",
+    "serverless-offline": "^3.17.0"
   }
 }
