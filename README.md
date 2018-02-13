@@ -19,7 +19,7 @@ Serverless: GET /placa/{placa}
 Serverless: Offline listening on http://localhost:3000
 ````
 
-Acesse `http://localhost:3000/placa/ABC1020` infornando a placa para consulta desejada.
+Acesse `http://localhost:3000/placa/ABC1020` informando a placa para consulta desejada.
 
 ```json
 {
