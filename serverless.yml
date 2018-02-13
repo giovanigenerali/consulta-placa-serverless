@@ -5,7 +5,8 @@ provider:
   name: aws
   runtime: nodejs6.10
   region: us-east-1
-  stage: dev
+  #stage: dev
+  memorySize: 128
   #profile: devProfile # https://serverless.com/framework/docs/providers/aws/guide/credentials#using-aws-profiles
 
 functions:
@@ -15,3 +16,6 @@ functions:
       - http:
           method: GET
           path: placa/{placa}
+
+plugins:
+  - serverless-offline
