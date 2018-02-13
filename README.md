@@ -40,7 +40,7 @@ Acesse `http://localhost:3000/placa/ABC1020` informando a placa para consulta de
 }
 ```
 
-## Invocar a função localment
+## Invocar a função localmente
 `npm run invoke:local`
 
 ```sh
