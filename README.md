@@ -224,7 +224,7 @@ https://serverless.com/framework/docs/
 
 ## Créditos
 
-Esse exemplo utiliza o package [sinesp-nodejs](https://github.com/bbarreto/sinesp-nodejs) do [@bbarreto](https://github.com/bbarreto)
+Esse exemplo utiliza o package [sinesp-nodejs](https://github.com/bbarreto/sinesp-nodejs) criado pelo [@bbarreto](https://github.com/bbarreto)
 
 
 ## Contribuição
