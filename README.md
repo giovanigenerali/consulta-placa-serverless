@@ -1,4 +1,6 @@
-# Consulta Placa
+# 🚘 ⚡ Consulta Placa
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contribuição)
 
 Serverless de exemplo para consultar placa de veículos na base do Detran.
 
@@ -220,7 +222,20 @@ REPORT RequestId: c2aa9c36-10c6-11e8-be68-798f8807984c	Duration: 692.35 ms	Bille
 
 https://serverless.com/framework/docs/
 
+## Créditos
 
-## Atenção
+Esse exemplo utiliza o package [sinesp-nodejs](https://github.com/bbarreto/sinesp-nodejs) do [@bbarreto](https://github.com/bbarreto)
+
+
+## Contribuição
+
+Se você quer melhorar esse exemplo basta enviar um [Pull Request](https://github.com/wgenial/consulta-placa-serverless/compare) ✌️
+
+## Licença
+
+[MIT](https://github.com/wgenial/consulta-placa-serverless/blob/master/LICENSE.md)
+
+
+## Observação
 
 Este projeto não possui nenhum vínculo oficial com o Sistema Nacional de Informações de Segurança Pública (SINESP). O software é disponibilizado da forma como está aqui e não há garantias que ele irá funcionar sempre. Como a API do SINESP não é publicamente documentada, esta biblioteca pode parar de funcionar a qualquer momento sem aviso prévio.
