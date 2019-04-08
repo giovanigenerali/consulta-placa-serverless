@@ -6,10 +6,10 @@ provider:
   memorySize: 128
   timeout: 6
   # stage: dev
-  region: s-east-1
+  region: us-east-1
   #profile: devProfile # https://serverless.com/framework/docs/providers/aws/guide/credentials#using-aws-profiles
   # environment:
-  #   HTTP_PROXY: http://IP:PORT
+  #   HTTP_PROXY: http://191.7.192.143:8080
 
 functions:
   placa:
@@ -20,6 +20,19 @@ functions:
           path: placa/{placa}
           cors:
             origin: "*"
+
+package:
+  exclude:
+    - .git/**
+    - .serverless/**
+    - .DS_Store
+    - placas/**
+    - README.md
+    - "*.png"
+    - LICENSE.md
+    - Makefile
+    - package.json
+    - yarn.lock
 
 plugins:
   - serverless-offline

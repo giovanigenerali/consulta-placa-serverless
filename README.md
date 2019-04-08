@@ -131,7 +131,7 @@ Caso você recebam algum erro ao fazer a chamada em produção como:
 
 ![](env-vars.png)
 
-Existem diversos sites com lista de proxy gratuito hospedado no Brasil, exemplo: https://www.proxydocker.com/pt/proxylist/city/S%C3%A3o%20Paulo
+Existem diversos sites com lista de proxy gratuito hospedado no Brasil, exemplo: https://hidemyna.me/en/proxy-list/?country=BR&maxtime=1120&type=hs#list
 
 ---
 
