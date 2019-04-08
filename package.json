@@ -1,14 +1,13 @@
 {
   "name": "consulta-placa-serverless",
-  "version": "1.0.0",
-  "description": "Consultar placa de veículos (SINESP) [serverless]",
+  "version": "2.0.0",
+  "description": "Consultar placa de veículos no SINESP [serverless]",
   "main": "handler.js",
   "scripts": {
-    "start:dev": "sls offline start",
-    "invoke:local": "make invoke-local",
-    "deploy:dev": "sls deploy -s dev",
-    "invoke": "make invoke",
-    "deploy:prod": "sls deploy -s production"
+    "start": "sls offline -s development",
+    "dev:invoke": "make invoke-development",
+    "prod:deploy": "sls deploy -s production",
+    "prod:invoke": "make invoke-production"
   },
   "repository": {
     "type": "git",
@@ -32,10 +31,10 @@
   },
   "homepage": "https://github.com/wgenial/consulta-placa-serverless#readme",
   "dependencies": {
-    "sinesp-nodejs": "^1.0.7"
+    "sinesp-nodejs": "^2.1.1"
   },
   "devDependencies": {
-    "serverless": "^1.27.3",
-    "serverless-offline": "^3.25.4"
+    "serverless": "^1.40.0",
+    "serverless-offline": "^4.9.4"
   }
 }

@@ -1,23 +1,30 @@
-// https://docs.aws.amazon.com/pt_br/lambda/latest/dg/programming-model.html
+const sinesp = require("sinesp-nodejs");
 
-const sinesp = require('sinesp-nodejs');
-
-// https://docs.aws.amazon.com/pt_br/lambda/latest/dg/nodejs-prog-model-handler.html
 module.exports.consultaPlaca = (event, context, callback) => {
+  context.callbackWaitsForEmptyEventLoop = false;
 
-  let placa = event.pathParameters.placa.replace(/\W/g,"");
+  let placa = event.pathParameters.placa.replace(/\W/g, "");
 
-  sinesp.consultaPlaca(placa, (result) => {
-  
-    // https://docs.aws.amazon.com/pt_br/lambda/latest/dg/nodejs-prog-model-using-old-runtime.html#context-and-callback
-    context.callbackWaitsForEmptyEventLoop = false;
-  
-    // https://docs.aws.amazon.com/pt_br/lambda/latest/dg/nodejs-prog-model-handler.html#nodejs-prog-model-handler-callback
-    callback(null, {
-      statusCode: 200, 
-      body: JSON.stringify(result)
+  sinesp
+    .consultaPlaca(placa)
+    .then(response => {
+      callback(null, {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+          "Access-Control-Allow-Credentials": true // Required for cookies, authorization headers with HTTPS
+        },
+        body: JSON.stringify(response)
+      });
+    })
+    .catch(err => {
+      callback(null, {
+        statusCode: err.statusCode || 500,
+        headers: {
+          "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+          "Access-Control-Allow-Credentials": true // Required for cookies, authorization headers with HTTPS
+        },
+        body: JSON.stringify(err)
+      });
     });
-
-  });
-
 };

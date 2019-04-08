@@ -1,21 +1,25 @@
-# https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/
-service: consulta-placa-serverless
+service: consultaplaca
 
 provider:
   name: aws
-  runtime: nodejs6.10
-  region: us-east-1
-  #stage: dev
+  runtime: nodejs8.10
   memorySize: 128
+  timeout: 6
+  # stage: dev
+  region: s-east-1
   #profile: devProfile # https://serverless.com/framework/docs/providers/aws/guide/credentials#using-aws-profiles
+  # environment:
+  #   HTTP_PROXY: http://IP:PORT
 
 functions:
-  consultaPlaca:
+  placa:
     handler: handler.consultaPlaca
     events:
       - http:
           method: GET
           path: placa/{placa}
+          cors:
+            origin: "*"
 
 plugins:
   - serverless-offline
