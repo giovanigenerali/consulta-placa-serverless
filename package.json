@@ -7,7 +7,9 @@
     "start": "sls offline -s development",
     "dev:invoke": "make invoke-development",
     "prod:deploy": "sls deploy -s production",
-    "prod:invoke": "make invoke-production"
+    "prod:invoke": "make invoke-production",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -31,10 +33,12 @@
   },
   "homepage": "https://github.com/wgenial/consulta-placa-serverless#readme",
   "dependencies": {
-    "sinesp-nodejs": "^2.1.1"
+    "sinesp-nodejs": "^2.1.1",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "serverless": "^1.45.1",
     "serverless-offline": "^5.5.0"
-  }
+  },
+  "snyk": true
 }
